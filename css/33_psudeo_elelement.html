@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li::first-letter {
+            background-color: red;
+        }
+        .main::first-line{
+            background-color: aqua;
+        }
+        .main::selection{
+            background-color: lightcoral;
+        }
+        ul li::before{
+            content: "";
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+        }
+        ul li::after{
+            content: "g";
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ::  -->
+    <ul>
+        <li>one</li>
+        <li>two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>five</li>
+        <li>six</li>
+    </ul>
+
+    <div class="main">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ex dolores incidunt ipsa! Voluptas ipsam dolore
+        dolor aperiam quae omnis commodi beatae, facilis doloremque modi earum suscipit dicta corrupti placeat! Lorem
+        ipsum dolor sit amet, consectetur adipisicing elit. Quasi ex nulla animi harum dicta, laudantium officiis
+        distinctio obcaecati repudiandae dolor in, fugit hic architecto! Doloremque placeat illo inventore amet numquam.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quidem quia illum omnis, earum laborum nisi
+        deleniti ratione id sed laboriosam consequuntur inventore exercitationem corrupti accusantium asperiores ex
+        provident excepturi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores sequi ratione iusto
+        hic eos adipisci placeat atque nihil vitae soluta harum maiores, blanditiis, impedit nam? Temporibus earum autem
+        quasi ipsam?
+    </div>
+
+</body>
+
+</html>
