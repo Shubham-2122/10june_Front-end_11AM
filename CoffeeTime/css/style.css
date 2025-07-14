@@ -13,6 +13,8 @@
 /* header start */
 #header {
     background: rgb(34, 40, 49);
+    position: relative;
+    overflow: hidden;
 }
 
 .nav {
@@ -43,7 +45,9 @@
 }
 
 .header-content .header-h1 {
-    font-size: 153px;
+    /* min and resp(), max */
+    /* 20px */
+    font-size: clamp(20px, 10vw, 153px);
     letter-spacing: 6px;
     font-weight: 400;
     font-family: "Grand Hotel", cursive;
@@ -51,7 +55,7 @@
 }
 
 .header-content .header-h3 {
-    font-size: 33px;
+    font-size: clamp(18px, 4vw, 33px);
     letter-spacing: 2px;
     font-weight: 700;
     font-family: "Montserrat";
@@ -68,7 +72,8 @@
 }
 
 .btn-header {
-    font-size: 33px;
+
+    font-size: clamp(18px, 4vw, 33px);
     line-height: 28px;
     color: #ffffff;
     font-weight: 700;
@@ -80,4 +85,74 @@
     border-radius: 20px;
 }
 
+#header::after {
+    content: url("/Image/header.png");
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    /* z-index: 0; */
+}
+
+.icon .bar {
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 700;
+    display: none;
+}
+
 /* header end */
+
+/* sec1 */
+#sec1 {
+    background: rgb(41, 161, 156);
+    padding: 30px 0;
+}
+
+#sec1 .row {
+    display: flex;
+}
+
+#sec1 .row .col {
+    border: 2px solid;
+    width: 50%;
+}
+
+.sec1-h1 {
+    font-size: 125px;
+    letter-spacing: 5px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Grand Hotel";
+}
+
+.btn-sec1 {
+    font-size: 33px;
+    line-height: 28px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+    background: rgb(34, 40, 49);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.img-sec1 {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.sec1-p {
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: right;
+}
+
+
+/* sec1 */
