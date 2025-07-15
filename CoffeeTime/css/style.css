@@ -114,12 +114,11 @@
 }
 
 #sec1 .row .col {
-    border: 2px solid;
     width: 50%;
 }
 
 .sec1-h1 {
-    font-size: 125px;
+    font-size: clamp(20px, 10vw, 125px);
     letter-spacing: 5px;
     color: #ffffff;
     font-weight: 400;
@@ -127,8 +126,7 @@
 }
 
 .btn-sec1 {
-    font-size: 33px;
-    line-height: 28px;
+    font-size: clamp(18px, 4vw, 33px);
     color: #ffffff;
     font-weight: 700;
     font-family: "Montserrat";
@@ -146,7 +144,7 @@
 }
 
 .sec1-p {
-    font-size: 24px;
+    font-size: clamp(18px, 4vw, 24px);
     letter-spacing: 1px;
     color: #ffffff;
     font-weight: 400;
@@ -154,5 +152,75 @@
     text-align: right;
 }
 
-
 /* sec1 */
+
+
+#sec2 {
+    background: rgb(34, 40, 49);
+    padding: 30px 0;
+}
+
+#sec2 .row {
+    display: flex;
+}
+
+#sec2 .row .col {
+    width: 50%;
+}
+
+#sec2 .sec2-btn {
+    background: rgb(41, 161, 156);
+}
+
+#sec2 .sec2-p {
+    text-align: left;
+
+}
+
+/* review style */
+#review {
+    background: rgb(34, 40, 49);
+    padding: 30px 0;
+}
+
+#review .row {
+    display: flex;
+}
+
+#review .row .col {
+    width: 50%;
+}
+
+.review-h1 {
+    font-size: clamp(20px, 9vw, 88px);
+    color: #fefefe;
+    font-weight: 400;
+    font-family: "Grand Hotel";
+    text-align: center;
+}
+
+#review .card-img {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.review-h3 {
+    font-size: 50px;
+    font-size: clamp(18px,6vw,50px);
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Grand Hotel";
+    text-align: center;
+}
+
+.review-p {
+    width: 80%;
+    margin: 10px auto;
+      font-size: clamp(18px, 4vw, 25px);
+    letter-spacing: 1px;
+    line-height: 28px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-align: center;
+}
