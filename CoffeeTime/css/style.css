@@ -206,7 +206,7 @@
 
 .review-h3 {
     font-size: 50px;
-    font-size: clamp(18px,6vw,50px);
+    font-size: clamp(18px, 6vw, 50px);
     color: #ffffff;
     font-weight: 400;
     font-family: "Grand Hotel";
@@ -216,11 +216,72 @@
 .review-p {
     width: 80%;
     margin: 10px auto;
-      font-size: clamp(18px, 4vw, 25px);
+    font-size: clamp(18px, 4vw, 25px);
     letter-spacing: 1px;
     line-height: 28px;
     color: #ffffff;
     font-weight: 400;
     font-family: "Montserrat";
     text-align: center;
+}
+
+/* footer */
+#footer {
+    padding: 70px 0;
+    background: rgb(41, 161, 156);
+}
+
+#footer .row {
+    display: flex;
+}
+
+#footer .row .col-4 {
+    width: 40%;
+}
+
+/* 100% */
+#footer .row .col-6 {
+    width: 60%;
+   
+}
+
+#footer .row .col-6 .col {
+    width: 33.33%;
+
+}
+
+.footer-h4 {
+
+    font-size: clamp(18px, 4vw, 33px);
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+}
+
+.footer-ul {
+    list-style: none;
+
+}
+
+.footer-ul .footer-li {
+    margin: 10px 0;
+}
+
+.footer-ul .footer-li .footer-a {
+    font-size: clamp(18px, 4vw, 22px);
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Montserrat";
+    text-decoration: none;
+}
+
+.footer-p {
+    font-size: clamp(18px, 4vw, 22px);
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-family: "Montserrat";
+    width: 90%;
+    margin: 10px 0;
 }
