@@ -1,9 +1,11 @@
-console.log("Hello Exetrnal Js")
-console.log("hello ")
-console.log(10+8) 
-console.log("jsabhdgj")
+// bom :- borwaer object model
 
+// window.alert("pls filed data...")
+// console.log(alert("hello"))
+// alert("Hello")
 
-document.write("Hello")
+// confirm("Are your sure ? ");
 
-document.writeln(" <br> HEllo ")
+// prompt(" 5 + 5 => ?")
+
+// print()
