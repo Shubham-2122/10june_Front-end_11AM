@@ -1,0 +1,51 @@
+Javascript 
+
+Easy way to use
+React,agul,vue,next 
+node.js
+
+React(2013,facebook) :- component base (reuse)
+-> without refresh 
+-> vitchurl dom
+-> Class
+-> react v16.8 function , hooks
+
+Agul(2010(google)),vue:-
+->loading
+-> real dom
+-> class 
+
+
+REact install Required 
+step1 :- node.js (open runtime eniviroment)
+Javascript lib (inbuilt)
+
+node v.20.03.60
+
+npm -> node package manager (react)
+
+global :- 3rd party package
+local :- npm react
+
+node
+
+step2:- install react 
+npm(global) vs npx(demo):- exit
+
+old version
+cmd -> npx create-react-app app-name
+cmd -> cd app-name
+cmd -> npm start
+
+fast react app
+vite+react
+cmd :- npm create vite@latest app-name
+cmd :- cd app-name 
+cmd :- npm install
+cmd :- npm run dev
+
+
+
+
+
+
