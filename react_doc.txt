@@ -44,7 +44,20 @@ cmd :- cd app-name
 cmd :- npm install
 cmd :- npm run dev
 
+Floder stru flow 
 
+html -> index.js -> app.js
+
+1) node_module :- npm i
+2) public :- index.html , image,assets,lib
+3) src :- index.js , App.js
+
+npm -y init
+
+pack-lock.json :- not delete 
+package.json :- script
+
+App.js -> manay more file link app.js
 
 
 
