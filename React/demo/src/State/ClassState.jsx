@@ -18,7 +18,6 @@ class ClassState extends Component {
     }
     render() {
 
-
         // let name = "het"
         // console.log(name)
         // console.log(this.state.name)

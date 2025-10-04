@@ -4,11 +4,16 @@
 
 import React from 'react'
 import ClassState from './ClassState'
+import FuncState from './FuncState'
+import Funobj from './Funobj'
 
 function MainState() {
   return (
     <div>
-      <ClassState />
+      {/* <ClassState /> */}
+
+      {/* <FuncState /> */}
+      <Funobj />
     </div>
   )
 }
