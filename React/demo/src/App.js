@@ -4,6 +4,9 @@ import React from "react";
 import MainState from "./State/MainState";
 import FormData from "./form/FormData";
 import Formobj from "./form/Formobj";
+import UseData from "./UseEffect/UseData";
+import UserTable from "./UseEffect/UserTable";
+import UserTable1 from "./UseEffect/UserTable1";
 // import Hello from "./Jsx/Hello";
 // import ClassCompo from "./Component/ClassCompo";
 // import FunCompo from "./Component/FunCompo";
@@ -31,7 +34,12 @@ function App() {
 
       {/* form_hadling  */}
       {/* <FormData /> */}
-      <Formobj />
+      {/* <Formobj /> */}
+
+      {/* useEffect */}
+      {/* <UseData /> */}
+      {/* <UserTable /> */}
+      <UserTable1 />
 
     </div>
   )
