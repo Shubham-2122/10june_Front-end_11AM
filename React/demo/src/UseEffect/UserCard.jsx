@@ -19,7 +19,6 @@ function UserCard() {
         <div>
             <div className="container">
                 <div className="row">
-
                     {
                         card && card.map((data, index) => {
                             const {id,title,description,image} = data

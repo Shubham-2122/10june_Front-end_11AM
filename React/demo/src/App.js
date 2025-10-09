@@ -8,6 +8,7 @@ import UseData from "./UseEffect/UseData";
 import UserTable from "./UseEffect/UserTable";
 import UserTable1 from "./UseEffect/UserTable1";
 import UserCard from "./UseEffect/UserCard";
+import MainContext from "./Context/MainContext";
 // import Hello from "./Jsx/Hello";
 // import ClassCompo from "./Component/ClassCompo";
 // import FunCompo from "./Component/FunCompo";
@@ -41,7 +42,10 @@ function App() {
       {/* <UseData /> */}
       {/* <UserTable /> */}
       {/* <UserTable1 /> */}
-      <UserCard />
+      {/* <UserCard /> */}
+
+      {/* context */}
+      <MainContext />
 
     </div>
   )
