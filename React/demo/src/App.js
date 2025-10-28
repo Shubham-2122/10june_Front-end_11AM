@@ -9,6 +9,9 @@ import UserTable from "./UseEffect/UserTable";
 import UserTable1 from "./UseEffect/UserTable1";
 import UserCard from "./UseEffect/UserCard";
 import MainContext from "./Context/MainContext";
+import BootStra from "./Boot/BootStra";
+import React_card from "./Boot/React_card";
+import Footers from "./Boot/Footers";
 // import Hello from "./Jsx/Hello";
 // import ClassCompo from "./Component/ClassCompo";
 // import FunCompo from "./Component/FunCompo";
@@ -16,7 +19,7 @@ import MainContext from "./Context/MainContext";
 function App() {
   return (
     <div>
-      <h1>Hell this App</h1>
+      {/* <h1>Hell this App</h1> */}
       
       {/* component */}
       {/* <ClassCompo /> */}
@@ -45,7 +48,12 @@ function App() {
       {/* <UserCard /> */}
 
       {/* context */}
-      <MainContext />
+        {/* <MainContext /> */}
+
+      {/* bott frameword  */}
+      {/* <BootStra /> */}
+      {/* <React_card /> */}
+      <Footers />
 
     </div>
   )
