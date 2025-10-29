@@ -12,50 +12,61 @@ import MainContext from "./Context/MainContext";
 import BootStra from "./Boot/BootStra";
 import React_card from "./Boot/React_card";
 import Footers from "./Boot/Footers";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./layout/pages/Home";
+import About from "./layout/pages/About";
+import Contact from "./layout/pages/Contact";
 // import Hello from "./Jsx/Hello";
 // import ClassCompo from "./Component/ClassCompo";
 // import FunCompo from "./Component/FunCompo";
 
 function App() {
   return (
-    <div>
-      {/* <h1>Hell this App</h1> */}
-      
-      {/* component */}
-      {/* <ClassCompo /> */}
-      {/* <FunCompo /> */}
+    <BrowserRouter>
+      <div>
+        {/* <h1>Hell this App</h1> */}
 
-      {/* jsx file */}
-      {/* <Hello /> */}
-      
-      {/* css */}
-      {/* <Css /> */}
+        {/* component */}
+        {/* <ClassCompo /> */}
+        {/* <FunCompo /> */}
 
-      {/* props */}
-      {/* <MainProps /> */}
+        {/* jsx file */}
+        {/* <Hello /> */}
 
-      {/* State */}
-      {/* <MainState /> */}
+        {/* css */}
+        {/* <Css /> */}
 
-      {/* form_hadling  */}
-      {/* <FormData /> */}
-      {/* <Formobj /> */}
+        {/* props */}
+        {/* <MainProps /> */}
 
-      {/* useEffect */}
-      {/* <UseData /> */}
-      {/* <UserTable /> */}
-      {/* <UserTable1 /> */}
-      {/* <UserCard /> */}
+        {/* State */}
+        {/* <MainState /> */}
 
-      {/* context */}
+        {/* form_hadling  */}
+        {/* <FormData /> */}
+        {/* <Formobj /> */}
+
+        {/* useEffect */}
+        {/* <UseData /> */}
+        {/* <UserTable /> */}
+        {/* <UserTable1 /> */}
+        {/* <UserCard /> */}
+
+        {/* context */}
         {/* <MainContext /> */}
 
-      {/* bott frameword  */}
-      {/* <BootStra /> */}
-      {/* <React_card /> */}
-      <Footers />
+        {/* bott frameword  */}
+        {/* <BootStra />
+      <React_card />
+      <Footers /> */}
 
-    </div>
+      <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+           <Route path="/contact" element={<Contact />} />
+      </Routes>
+      </div>
+    </BrowserRouter>
   )
 }
 export default App;
