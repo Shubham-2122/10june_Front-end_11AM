@@ -16,6 +16,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./layout/pages/Home";
 import About from "./layout/pages/About";
 import Contact from "./layout/pages/Contact";
+import About1 from "./layout/pages/About1";
+import About2 from "./layout/pages/About2";
+import Not from "./layout/pages/Not";
 // import Hello from "./Jsx/Hello";
 // import ClassCompo from "./Component/ClassCompo";
 // import FunCompo from "./Component/FunCompo";
@@ -62,8 +65,15 @@ function App() {
 
       <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About />} >
+            <Route path="about1" element={<About1 />} />
+            <Route path="about2" element={<About2 />} />
+          </Route>
            <Route path="/contact" element={<Contact />} />
+
+          {/* not found */}
+          <Route path="*" element={<Not />} />
+
       </Routes>
       </div>
     </BrowserRouter>
