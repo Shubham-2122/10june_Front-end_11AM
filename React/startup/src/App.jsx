@@ -14,6 +14,7 @@ import Price from './website/Pages/Price'
 import NotFound from './website/Pages/NotFound'
 import Dashboard from './Admin/Apages/Dashboard'
 import CourseMang from './Admin/Apages/CourseMang'
+import CourseAdd from './Admin/Apages/CourseAdd'
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           {/* admin route */}
           <Route path='/dash' element={<Dashboard />} />
           <Route path='/course' element={<CourseMang />} />
+          <Route path='/courseadd' element={<CourseAdd />} />
 
 
         </Routes>

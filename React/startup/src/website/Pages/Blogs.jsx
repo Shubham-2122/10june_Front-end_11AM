@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header2 from '../coman/Header2'
 import Footer from '../coman/Footer'
+import axios from 'axios'
 
 function Blogs() {
+
+    const [course,setcourse] = useState([])
+
+    useEffect(()=>{
+        fetchdata()
+    },[])
+
+    const fetchdata=async()=>{
+        const res = await axios.get("http://localhost:3000/courses")
+        console.log(res.data)
+        setcourse(res.data)
+    }
+
     return (
         <div>
             <Header2 title="Blog Grid" data="Blog Grid" />
@@ -14,195 +28,32 @@ function Blogs() {
                             {/* Blog list Start */}
                             <div className="col-lg-8">
                                 <div className="row g-5">
-                                    <div className="col-md-6 wow slideInUp" data-wow-delay="0.1s">
+                                 {
+                                    course && course.map((data,index)=>{
+                                        console.log(data)
+                                        return(
+                                               <div className="col-md-6 wow slideInUp" data-wow-delay="0.1s">
                                         <div className="blog-item bg-light rounded overflow-hidden">
                                             <div className="blog-img position-relative overflow-hidden">
-                                                <img className="img-fluid" src="img/blog-1.jpg" alt />
-                                                <a className="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href>Web Design</a>
+                                                <img className="img-fluid" src={data.img} alt />
+                                                <a className="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href>{data.cname}</a>
                                             </div>
                                             <div className="p-4">
                                                 <div className="d-flex mb-3">
-                                                    <small className="me-3"><i className="far fa-user text-primary me-2" />John Doe</small>
-                                                    <small><i className="far fa-calendar-alt text-primary me-2" />01 Jan, 2045</small>
+                                                    <small className="me-3"><i className="far fa-user text-primary me-2" />{data.author}</small>
+                                                    <small><i className="far fa-calendar-alt text-primary me-2" />{data.date}</small>
                                                 </div>
-                                                <h4 className="mb-3">How to build a website</h4>
-                                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
+                                                <h4 className="mb-3">{data.title}</h4>
+                                                <p>{data.desc}</p>
                                                 <a className="text-uppercase" href>Read More <i className="bi bi-arrow-right" /></a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                                        <div className="blog-item bg-light rounded overflow-hidden">
-                                            <div className="blog-img position-relative overflow-hidden">
-                                                <img className="img-fluid" src="img/blog-2.jpg" alt />
-                                                <a className="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href>Web Design</a>
-                                            </div>
-                                            <div className="p-4">
-                                                <div className="d-flex mb-3">
-                                                    <small className="me-3"><i className="far fa-user text-primary me-2" />John Doe</small>
-                                                    <small><i className="far fa-calendar-alt text-primary me-2" />01 Jan, 2045</small>
-                                                </div>
-                                                <h4 className="mb-3">How to build a website</h4>
-                                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                                <a className="text-uppercase" href>Read More <i className="bi bi-arrow-right" /></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                                        <div className="blog-item bg-light rounded overflow-hidden">
-                                            <div className="blog-img position-relative overflow-hidden">
-                                                <img className="img-fluid" src="img/blog-3.jpg" alt />
-                                                <a className="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href>Web Design</a>
-                                            </div>
-                                            <div className="p-4">
-                                                <div className="d-flex mb-3">
-                                                    <small className="me-3"><i className="far fa-user text-primary me-2" />John Doe</small>
-                                                    <small><i className="far fa-calendar-alt text-primary me-2" />01 Jan, 2045</small>
-                                                </div>
-                                                <h4 className="mb-3">How to build a website</h4>
-                                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                                <a className="text-uppercase" href>Read More <i className="bi bi-arrow-right" /></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                                        <div className="blog-item bg-light rounded overflow-hidden">
-                                            <div className="blog-img position-relative overflow-hidden">
-                                                <img className="img-fluid" src="img/blog-1.jpg" alt />
-                                                <a className="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href>Web Design</a>
-                                            </div>
-                                            <div className="p-4">
-                                                <div className="d-flex mb-3">
-                                                    <small className="me-3"><i className="far fa-user text-primary me-2" />John Doe</small>
-                                                    <small><i className="far fa-calendar-alt text-primary me-2" />01 Jan, 2045</small>
-                                                </div>
-                                                <h4 className="mb-3">How to build a website</h4>
-                                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                                <a className="text-uppercase" href>Read More <i className="bi bi-arrow-right" /></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                                        <div className="blog-item bg-light rounded overflow-hidden">
-                                            <div className="blog-img position-relative overflow-hidden">
-                                                <img className="img-fluid" src="img/blog-2.jpg" alt />
-                                                <a className="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href>Web Design</a>
-                                            </div>
-                                            <div className="p-4">
-                                                <div className="d-flex mb-3">
-                                                    <small className="me-3"><i className="far fa-user text-primary me-2" />John Doe</small>
-                                                    <small><i className="far fa-calendar-alt text-primary me-2" />01 Jan, 2045</small>
-                                                </div>
-                                                <h4 className="mb-3">How to build a website</h4>
-                                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                                <a className="text-uppercase" href>Read More <i className="bi bi-arrow-right" /></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                                        <div className="blog-item bg-light rounded overflow-hidden">
-                                            <div className="blog-img position-relative overflow-hidden">
-                                                <img className="img-fluid" src="img/blog-3.jpg" alt />
-                                                <a className="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href>Web Design</a>
-                                            </div>
-                                            <div className="p-4">
-                                                <div className="d-flex mb-3">
-                                                    <small className="me-3"><i className="far fa-user text-primary me-2" />John Doe</small>
-                                                    <small><i className="far fa-calendar-alt text-primary me-2" />01 Jan, 2045</small>
-                                                </div>
-                                                <h4 className="mb-3">How to build a website</h4>
-                                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                                <a className="text-uppercase" href>Read More <i className="bi bi-arrow-right" /></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                                        <div className="blog-item bg-light rounded overflow-hidden">
-                                            <div className="blog-img position-relative overflow-hidden">
-                                                <img className="img-fluid" src="img/blog-1.jpg" alt />
-                                                <a className="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href>Web Design</a>
-                                            </div>
-                                            <div className="p-4">
-                                                <div className="d-flex mb-3">
-                                                    <small className="me-3"><i className="far fa-user text-primary me-2" />John Doe</small>
-                                                    <small><i className="far fa-calendar-alt text-primary me-2" />01 Jan, 2045</small>
-                                                </div>
-                                                <h4 className="mb-3">How to build a website</h4>
-                                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                                <a className="text-uppercase" href>Read More <i className="bi bi-arrow-right" /></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                                        <div className="blog-item bg-light rounded overflow-hidden">
-                                            <div className="blog-img position-relative overflow-hidden">
-                                                <img className="img-fluid" src="img/blog-2.jpg" alt />
-                                                <a className="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href>Web Design</a>
-                                            </div>
-                                            <div className="p-4">
-                                                <div className="d-flex mb-3">
-                                                    <small className="me-3"><i className="far fa-user text-primary me-2" />John Doe</small>
-                                                    <small><i className="far fa-calendar-alt text-primary me-2" />01 Jan, 2045</small>
-                                                </div>
-                                                <h4 className="mb-3">How to build a website</h4>
-                                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                                <a className="text-uppercase" href>Read More <i className="bi bi-arrow-right" /></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 wow slideInUp" data-wow-delay="0.1s">
-                                        <div className="blog-item bg-light rounded overflow-hidden">
-                                            <div className="blog-img position-relative overflow-hidden">
-                                                <img className="img-fluid" src="img/blog-3.jpg" alt />
-                                                <a className="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href>Web Design</a>
-                                            </div>
-                                            <div className="p-4">
-                                                <div className="d-flex mb-3">
-                                                    <small className="me-3"><i className="far fa-user text-primary me-2" />John Doe</small>
-                                                    <small><i className="far fa-calendar-alt text-primary me-2" />01 Jan, 2045</small>
-                                                </div>
-                                                <h4 className="mb-3">How to build a website</h4>
-                                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                                <a className="text-uppercase" href>Read More <i className="bi bi-arrow-right" /></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 wow slideInUp" data-wow-delay="0.6s">
-                                        <div className="blog-item bg-light rounded overflow-hidden">
-                                            <div className="blog-img position-relative overflow-hidden">
-                                                <img className="img-fluid" src="img/blog-1.jpg" alt />
-                                                <a className="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href>Web Design</a>
-                                            </div>
-                                            <div className="p-4">
-                                                <div className="d-flex mb-3">
-                                                    <small className="me-3"><i className="far fa-user text-primary me-2" />John Doe</small>
-                                                    <small><i className="far fa-calendar-alt text-primary me-2" />01 Jan, 2045</small>
-                                                </div>
-                                                <h4 className="mb-3">How to build a website</h4>
-                                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                                <a className="text-uppercase" href>Read More <i className="bi bi-arrow-right" /></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-12 wow slideInUp" data-wow-delay="0.1s">
-                                        <nav aria-label="Page navigation">
-                                            <ul className="pagination pagination-lg m-0">
-                                                <li className="page-item disabled">
-                                                    <a className="page-link rounded-0" href="#" aria-label="Previous">
-                                                        <span aria-hidden="true"><i className="bi bi-arrow-left" /></span>
-                                                    </a>
-                                                </li>
-                                                <li className="page-item active"><a className="page-link" href="#">1</a></li>
-                                                <li className="page-item"><a className="page-link" href="#">2</a></li>
-                                                <li className="page-item"><a className="page-link" href="#">3</a></li>
-                                                <li className="page-item">
-                                                    <a className="page-link rounded-0" href="#" aria-label="Next">
-                                                        <span aria-hidden="true"><i className="bi bi-arrow-right" /></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>
+                                        )
+                                    })
+                                 }
+                                
+                                  
                                 </div>
                             </div>
                             {/* Blog list End */}

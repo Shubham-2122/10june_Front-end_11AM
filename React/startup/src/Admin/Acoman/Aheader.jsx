@@ -40,7 +40,14 @@ function Aheader({title,data}) {
                         <div className="collapse navbar-collapse" id="navbarCollapse">
                             <div className="navbar-nav ms-auto py-0">
                                 <NavLink to="/dash" className="nav-item nav-link ">Dashboard</NavLink>
-                                <NavLink to="/course" className="nav-item nav-link ">Course</NavLink>
+                                  <div className="nav-item dropdown">
+                                    <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Course</a>
+                                    <div className="dropdown-menu m-0">
+                                        <NavLink to="/course" className="dropdown-item">Course Mange</NavLink>
+                                        <NavLink to="/courseadd" className="dropdown-item">Course Add</NavLink>
+                                    </div>
+                                </div>
+                               
                                 <NavLink to="/service" className="nav-item nav-link">Services</NavLink>
                                 <div className="nav-item dropdown">
                                     <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
