@@ -15,13 +15,26 @@ import NotFound from './website/Pages/NotFound'
 import Dashboard from './Admin/Apages/Dashboard'
 import CourseMang from './Admin/Apages/CourseMang'
 import CourseAdd from './Admin/Apages/CourseAdd'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   return (
     <BrowserRouter>
-
+     
       <div>
+         <ToastContainer position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="colored" />
+
         <Routes>
+
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/service' element={<Service />} />
@@ -43,6 +56,7 @@ function App() {
 
 
         </Routes>
+
       </div>
     </BrowserRouter>
   )

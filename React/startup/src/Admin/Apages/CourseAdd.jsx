@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Aheader from '../Acoman/Aheader'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 function CourseAdd() {
 
@@ -39,6 +40,7 @@ function CourseAdd() {
             
             const res = await axios.post("http://localhost:3000/courses", course)
             console.log(res.data)
+            toast.success("coruse Add Successfully.")
             redirect("/course")
             setcourse({
                 id: "",
@@ -60,7 +62,7 @@ function CourseAdd() {
             <div className="container">
                 <h1 className='text-center'>Course Add </h1>
                 <div className="row g-5">
-                    <div className="col-lg-12 py-5 wow slideInUp" data-wow-delay="0.3s">
+                    <div className="col-lg-12 py-5 " >
                         <form onSubmit={AddCourse}>
                             <div className="row g-3">
                                 <div className="col-md-6">
