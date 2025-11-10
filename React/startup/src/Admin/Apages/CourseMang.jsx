@@ -14,7 +14,7 @@ function CourseMang() {
 
     const fetchdata = async () => {
         const res = await axios.get("http://localhost:3000/courses")
-        console.log(res.data)
+        // console.log(res.data)
         setcourse(res.data)
     }
 
@@ -31,7 +31,7 @@ function CourseMang() {
     // single product
     const getsingle = async (id) => {
         const res = await axios.get(`http://localhost:3000/courses/${id}`)
-        console.log(res.data)
+        // console.log(res.data)
         setsingle(res.data)
         toast.success('view data', { transition: Slide });
 
@@ -40,9 +40,57 @@ function CourseMang() {
     // delete product
     const deletecourse = async (id) => {
         const res = await axios.delete(`http://localhost:3000/courses/${id}`)
-        console.log(res.data)
+        // console.log(res.data)
         fetchdata()
+        toast.error('Course Delete.. ', { transition: Slide })
     }
+
+    // course update 
+    const [updatemd, setupdatemb] = useState(null)
+    // data show`
+    const [edit, setedit] = useState({
+        id: "",
+        cname: "",
+        img: "",
+        date: "",
+        desc: "",
+        author: "",
+        title: ""
+    })
+
+    // model open
+    const getdata = (data) => {
+        console.log(data)
+        setupdatemb(data)
+        setedit(data)
+    }
+
+    // form handle
+    const getchange =(e)=>{
+        setedit({
+            ...edit,
+            [e.target.name] : e.target.value
+        })
+    }
+
+    // update data
+    const changupdate=async(e)=>{
+         e.preventDefault()
+
+         try {
+            const res = await axios.put(`http://localhost:3000/courses/${edit.id}`,edit)
+            console.log(res.data)
+            toast.success("Course Updated..")
+            fetchdata()
+            setupdatemb(null)
+            
+         } catch (error) {
+            console.log("Api Data not Found",error)
+            toast.error("Api data not Found" ,{transition:Slide})
+         }
+    }
+
+
 
     return (
         <div>
@@ -70,7 +118,7 @@ function CourseMang() {
                                         <td>{data.date}</td>
                                         <td>
                                             <button className='btn btn-info' data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={() => getsingle(data.id)}>View</button>
-                                            <button className='btn btn-success mx-2'>update</button>
+                                            <button className='btn btn-success mx-2' onClick={() => getdata(data)}>update</button>
                                             <button className='btn btn-danger' onClick={() => deletecourse(data.id)}>delete</button>
                                         </td>
                                     </tr>
@@ -113,6 +161,51 @@ function CourseMang() {
                         </div>
                     </div>
                 </div>
+
+                {
+                    updatemd && (
+                        <div className="container">
+                            <h1 className='text-center'>Course Update </h1>
+                            <div className="row g-5">
+                                <div className="col-lg-12 py-5 " >
+                                    <form >
+                                        <div className="row g-3">
+                                            <div className="col-md-6">
+                                                <input type="text" onChange={getchange} name='author' value={edit.author} className="form-control border-0 bg-light px-4" placeholder="Your Autho Name" style={{ height: 55 }} />
+                                            </div>
+                                            <div className="col-md-6">
+                                                <input type="text" onChange={getchange} name='cname'  value={edit.cname} className="form-control border-0 bg-light px-4" placeholder="Your Course Name" style={{ height: 55 }} />
+                                            </div>
+                                            <div className="col-6">
+                                                <input type="text" onChange={getchange} name='title' value={edit.title}  className="form-control border-0 bg-light px-4" placeholder="your Course title" style={{ height: 55 }} />
+                                            </div>
+                                            <div className="col-6">
+                                                <input type="date" onChange={getchange} name='date' value={edit.date}  className="form-control border-0 bg-light px-4" placeholder="your Date" style={{ height: 55 }} />
+                                            </div>
+                                            <div className="col-12">
+                                                <input type="url" onChange={getchange} name='img' value={edit.img} className="form-control border-0 bg-light px-4" placeholder="your Image" style={{ height: 55 }} />
+                                            </div>
+                                            <div className="col-12">
+                                                <textarea  name='desc' onChange={getchange} value={edit.desc} className="form-control border-0 bg-light px-4 py-3" rows={4} placeholder="Message" defaultValue={""} />
+                                            </div>
+                                            <div className="col-12">
+                                                <div className="row">
+                                                    <div className="col-6">
+                                                        <button className="btn btn-primary w-100 py-3" onClick={changupdate} type="submit">Update Course</button>
+                                                    </div>
+                                                    <div className="col-6">
+                                                        <button className="btn btn-primary w-100 py-3" onClick={()=>setupdatemb(null)} type="submit">Cancle Course</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    )
+                }
 
 
             </div>

@@ -49,10 +49,10 @@
     {
       "id": "2",
       "cname": "Back-end ",
-      "author": "jiger",
-      "date": "03june,2026",
+      "author": "prashant sir",
+      "date": "2026-01-21",
       "img": "https://images.pexels.com/photos/7128957/pexels-photo-7128957.jpeg?_gl=1*ymwjx0*_ga*OTgxMzcxNzg3LjE3NTE4ODEzNTk.*_ga_8JE65Q40S6*czE3NjIzMjUxMjkkbzMwJGcxJHQxNzYyMzI1MzEzJGozNiRsMCRoMA..",
-      "title": "How to python course",
+      "title": "How to Java course",
       "desc": "hello this back-end course..."
     },
     {
@@ -72,15 +72,6 @@
       "desc": "This Graphic course design for Tops . .. ",
       "author": "niral sir",
       "title": "How to design a layout"
-    },
-    {
-      "id": "1762412517164",
-      "cname": "hardware network",
-      "img": "https://th.bing.com/th/id/OIP.8AbwCATrWvJh5PJwK9B4QwHaHa?w=198&h=198&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
-      "date": "2025-12-19",
-      "desc": " hardware network course this tops technlo . .. . ",
-      "author": "Tops data",
-      "title": " hardware network course"
     },
     {
       "id": "1762496703500",
