@@ -82,5 +82,25 @@
       "author": "xyz",
       "title": "Design course data"
     }
+  ],
+  "team": [
+    {
+      "id": "1",
+      "name": "jiger sir",
+      "designation": "senior trainer",
+      "image": "https://images.pexels.com/photos/8727368/pexels-photo-8727368.jpeg?_gl=1*1w2f34e*_ga*OTgxMzcxNzg3LjE3NTE4ODEzNTk.*_ga_8JE65Q40S6*czE3NjI4NDI0MzkkbzMxJGcxJHQxNzYyODQyNDk1JGo0JGwwJGgw"
+    },
+    {
+      "id": "2",
+      "name": "Rajni ma'am",
+      "designation": "junior trainer",
+      "image": "https://images.pexels.com/photos/10029786/pexels-photo-10029786.jpeg?_gl=1*ish8lf*_ga*OTgxMzcxNzg3LjE3NTE4ODEzNTk.*_ga_8JE65Q40S6*czE3NjI4NDI0MzkkbzMxJGcxJHQxNzYyODQyNDk1JGo0JGwwJGgw"
+    },
+    {
+      "id": "1762843836754",
+      "name": "guvrav sir ",
+      "image": "https://images.pexels.com/photos/8217300/pexels-photo-8217300.jpeg?_gl=1*parekc*_ga*OTgxMzcxNzg3LjE3NTE4ODEzNTk.*_ga_8JE65Q40S6*czE3NjI4NDI0MzkkbzMxJGcxJHQxNzYyODQyNDk1JGo0JGwwJGgw",
+      "designation": "graphic "
+    }
   ]
 }
