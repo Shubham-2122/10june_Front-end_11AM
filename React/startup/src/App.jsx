@@ -19,6 +19,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import TeamMange from './Admin/Apages/TeamMange'
 import TeamAdd from './Admin/Apages/TeamAdd'
+import Createuser from './website/Pages/Createuser'
+import Alogin from './Admin/Apages/Alogin'
 
 
 function App() {
@@ -48,6 +50,7 @@ function App() {
           <Route path='/testi' element={<Teasti />} />
           <Route path='/quta' element={<Quota />} />
           <Route path='/price' element={<Price />} />
+          <Route path='/new' element={<Createuser />} />
 
           <Route path='*' element={<NotFound />} />
 
@@ -57,6 +60,7 @@ function App() {
           <Route path='/courseadd' element={<CourseAdd />} />
            <Route path='/teamMange' element={<TeamMange />} />
             <Route path='/Teamadd' element={<TeamAdd />} />
+            <Route path='/alogin' element={<Alogin />} />
 
 
         </Routes>

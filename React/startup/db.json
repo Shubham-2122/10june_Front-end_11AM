@@ -34,6 +34,13 @@
       "email": "varj@gmail.com",
       "password": "1234",
       "status": "unblock"
+    },
+    {
+      "id": "1762929705995",
+      "name": "vivek",
+      "email": "vivek@gmail.com",
+      "password": "1234",
+      "status": "unblock"
     }
   ],
   "courses": [
