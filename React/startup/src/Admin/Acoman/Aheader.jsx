@@ -1,7 +1,25 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 function Aheader({ title, data }) {
+
+    const redirect = useNavigate()
+
+    useEffect(()=>{
+        if(!localStorage.getItem("Aid")){
+            redirect("/alogin")
+        }
+    })
+
+    const logout=()=>{
+        localStorage.removeItem("Aid")
+        localStorage.removeItem("Aname")
+        toast.success("successfully logout")
+        redirect("/alogin")
+    }
+
+
     return (
         <div>
             <div>
@@ -67,7 +85,29 @@ function Aheader({ title, data }) {
                                             <NavLink to="/quta" className="dropdown-item">Free Quote</NavLink>
                                         </div>
                                     </div>
-                                    <NavLink to="/contact" className="nav-item nav-link">Contact</NavLink>
+                                    {
+                                        (()=>{
+                                            if(localStorage.getItem("Aid")){
+                                                return(
+                                                    <Link className="nav-item nav-link">hello.. {localStorage.getItem("Aname")}</Link>
+                                                )
+                                            }
+                                        })()
+                                    }
+                                    {
+                                        (()=>{
+                                            if(localStorage.getItem("Aid")){
+                                                return(
+                                                    <Link onClick={logout} className="nav-item nav-link">logout</Link>
+                                                )
+                                            }
+                                            else{
+                                                return(
+                                                      <NavLink to="/alogin" className="nav-item nav-link">Alogin</NavLink>
+                                                )
+                                            }
+                                        })()
+                                    }
                                 </div>
                                 <butaton type="button" className="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i className="fa fa-search" /></butaton>
 

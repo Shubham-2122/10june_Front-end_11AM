@@ -44,7 +44,7 @@ function Createuser() {
                 password: "",
                 status: ""
             })
-            redirecet("/")
+            redirecet("/login")
         } catch (error) {
             console.log("Api data not Found..", error)
         }

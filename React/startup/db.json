@@ -41,6 +41,13 @@
       "email": "vivek@gmail.com",
       "password": "1234",
       "status": "unblock"
+    },
+    {
+      "id": "1763015276318",
+      "name": "keyur",
+      "email": "keyur@gmail.com",
+      "password": "654321",
+      "status": "unblock"
     }
   ],
   "courses": [
