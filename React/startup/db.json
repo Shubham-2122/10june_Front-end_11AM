@@ -16,9 +16,9 @@
   "users": [
     {
       "id": "1",
-      "name": "user",
-      "email": "user@gmail.com",
-      "password": "1234",
+      "name": "shubham sir",
+      "email": "shubham@gmail.com",
+      "password": "4321",
       "status": "unblock"
     },
     {
@@ -30,7 +30,7 @@
     },
     {
       "id": "3",
-      "name": "varj",
+      "name": "varj patel",
       "email": "varj@gmail.com",
       "password": "1234",
       "status": "unblock"

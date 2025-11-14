@@ -22,6 +22,7 @@ import TeamAdd from './Admin/Apages/TeamAdd'
 import Createuser from './website/Pages/Createuser'
 import Alogin from './Admin/Apages/Alogin'
 import Ulogin from './website/Pages/Ulogin'
+import EditUser from './website/Pages/EditUser'
 
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
           <Route path='/price' element={<Price />} />
           <Route path='/new' element={<Createuser />} />
           <Route path='/login' element={<Ulogin />} />
+          <Route path='/edit' element={<EditUser />} />
 
           <Route path='*' element={<NotFound />} />
 
