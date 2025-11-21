@@ -1,0 +1,46 @@
+Redux:- javascrip lib 
+React+redux , agule + redux , vue+redux
+ store 1       store muliple , store mulitple 
+
+Redux :- predit / complex state manage / global mamange
+
+Redux flow
+	store
+	reducer
+	action
+
+user -> bookstall:- store
+bookname-action -> seller:- store :- reducer
+boolprice 
+
+crud : store
+create
+read
+update
+delete
+
+action->Store->reducer->action
+
+react+redux       react+reducer+toolkit
+store			store : state
+reducer			Slice :- action+reducer
+action
+
+
+useContext -> useSeletcor
+useReducer -> usedispatch
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
