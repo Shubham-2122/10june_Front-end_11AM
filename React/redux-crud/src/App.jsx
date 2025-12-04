@@ -1,10 +1,19 @@
 import React from 'react'
+import UserRead from './Pages/UserRead'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import AddUser from './Pages/AddUser'
+import Header from './Coman/Header'
 
 function App() {
   return (
-    <div>
-      <h1>Hello this Redux Crud</h1>
-    </div>
+    <BrowserRouter>
+    <Header />
+    <Routes>
+      <Route path='/' element={<UserRead />} />
+      <Route path='/create' element={<AddUser />} />
+    </Routes>
+
+    </BrowserRouter>
   )
 }
 

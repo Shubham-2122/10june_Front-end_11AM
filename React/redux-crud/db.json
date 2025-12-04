@@ -1,25 +1,39 @@
 {
-    "user":[
-        {
-            "id":1,
-            "name":"user1",
-            "email":"user@gmail.com",
-            "password":"1234",
-            "phone":"873567465"
-        },
-         {
-            "id":2,
-            "name":"user2",
-            "email":"user2@gmail.com",
-            "password":"123456",
-            "phone":"676456435"
-        },
-         {
-            "id":3,
-            "name":"user3",
-            "email":"user3@gmail.com",
-            "password":"123445",
-            "phone":"873567465"
-        }
-    ]
+  "user": [
+    {
+      "id": "1",
+      "name": "user1",
+      "email": "user@gmail.com",
+      "password": "1234",
+      "phone": "873567465"
+    },
+    {
+      "id": "2",
+      "name": "user2",
+      "email": "user2@gmail.com",
+      "password": "123456",
+      "phone": "676456435"
+    },
+    {
+      "id": "3",
+      "name": "user3",
+      "email": "user3@gmail.com",
+      "password": "123445",
+      "phone": "873567465"
+    },
+    {
+      "id": "1764831543351",
+      "name": "Shubham jadav",
+      "email": "shubhamjadav.tops@gmail.com",
+      "password": "23423543",
+      "phone": "09824024708"
+    },
+    {
+      "id": "1764831657127",
+      "name": "sujal jadav",
+      "email": "sujal@gmail.com",
+      "password": "bdfg",
+      "phone": "435345345"
+    }
+  ]
 }
