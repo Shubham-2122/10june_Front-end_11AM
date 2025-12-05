@@ -26,6 +26,18 @@ export const createuser = createAsyncThunk(
         }
     }
 )
+// delete
+export const deleteuser = createAsyncThunk(
+    'deleteuser',async(id,{rejectWithValue})=>{
+        try {
+            const res = await axios.delete(`http://localhost:3000/user/${id}`)
+            const resp = await res.data;
+            return resp
+        } catch (error) {
+            return rejectWithValue(error)
+        }
+    }
+)
 
 export const userSlice = createSlice({
     name:"userDetails",
@@ -70,6 +82,18 @@ export const userSlice = createSlice({
             state.users.push(action.payload)
         })
          .addCase(createuser.rejected,(state,action)=>{
+            state.loading = false
+            state.error = action.payload
+        })
+
+          .addCase(deleteuser.pending,(state,action)=>{
+            state.loading = true
+        })
+        .addCase(deleteuser.fulfilled,(state,action)=>{
+            state.loading = false;
+            state.users = state.users.filter((data,index)=> index !== action.payload)
+        })
+         .addCase(deleteuser.rejected,(state,action)=>{
             state.loading = false
             state.error = action.payload
         })

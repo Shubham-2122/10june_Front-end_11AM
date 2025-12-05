@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { readdata } from '../Slice/userSlice'
+import { deleteuser, readdata } from '../Slice/userSlice'
 
 function UserRead() {
 
@@ -37,7 +37,7 @@ function UserRead() {
                                     <td>
                                         <button className='btn btn-info'>View</button>
                                         <button className='btn btn-success mx-2'>edit</button>
-                                        <button className='btn btn-danger'>delete</button>
+                                        <button className='btn btn-danger' onClick={()=>dispatch(deleteuser(data.id))}>delete</button>
                                     </td>
                                 </tr>)
                             })
