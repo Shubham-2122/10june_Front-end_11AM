@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteuser, readdata } from '../Slice/userSlice'
+import { Link } from 'react-router-dom'
 
 function UserRead() {
 
@@ -28,19 +29,19 @@ function UserRead() {
                     </thead>
                     <tbody>
                         {
-                            users && users.map((data, index) => {
-                                console.log(data)
-                                return (<tr>
-                                    <th scope="row">{data.id}</th>
-                                    <td>{data.name}</td>
-                                    <td>{data.email}</td>
+                            Array.isArray(users) && users.map((data, index) => (
+                                <tr key={index}>
+                                    <th>{data?.id}</th>
+                                    <td>{data?.name}</td>
+                                    <td>{data?.email}</td>
                                     <td>
                                         <button className='btn btn-info'>View</button>
-                                        <button className='btn btn-success mx-2'>edit</button>
-                                        <button className='btn btn-danger' onClick={()=>dispatch(deleteuser(data.id))}>delete</button>
+                                        <Link className='btn btn-success mx-2' to={`/edit/${data?.id}`}>edit</Link>
+                                        <button className='btn btn-danger' onClick={() => dispatch(deleteuser(data?.id))}>delete</button>
                                     </td>
-                                </tr>)
-                            })
+                                </tr>
+                            ))
+                            
                         }
 
                     </tbody>
