@@ -1,0 +1,14 @@
+// vraible store
+$bg-color : red;
+$color : blue;
+$font : 50px;
+
+#h1{
+    background-color: $bg-color;
+    color: $color;
+    font-size: $font;
+}
+h2{
+    background-color: $color;
+    color: $bg-color;
+}

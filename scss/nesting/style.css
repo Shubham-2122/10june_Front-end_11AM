@@ -1,0 +1,18 @@
+.ul {
+  list-style: none;
+}
+.ul li {
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgb(98, 191, 222);
+}
+.ul li a {
+  text-decoration: none;
+  color: red;
+}
+.ul li:hover {
+  background-color: lightcoral;
+}
+.ul li:hover a {
+  color: black;
+}/*# sourceMappingURL=style.css.map */
