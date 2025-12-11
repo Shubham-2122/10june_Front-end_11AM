@@ -1,0 +1,38 @@
+#h1 {
+  border: 5px solid gold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+h2 {
+  border: 5px solid gold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border-color: red;
+}
+
+#data {
+  border: 10px solid blue;
+}
+
+.main {
+  height: 200px;
+  width: 200px;
+  border: 5px solid green;
+}
+
+.main1 {
+  display: flex;
+  justify-content: space-between;
+}
+.main1 .box {
+  height: 200px;
+  width: 200px;
+  border: 5px solid gold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+@media only screen and (max-width: 768px) {
+  .main1 {
+    display: flex;
+    justify-content: center;
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */

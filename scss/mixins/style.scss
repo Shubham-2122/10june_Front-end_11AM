@@ -1,0 +1,47 @@
+
+// width parmeter
+@mixin border(){
+    border: 5px solid gold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@mixin border2($size,$color){
+    border: $size solid $color;
+}
+
+@mixin flex($data){
+    display: flex;
+    justify-content: $data;
+}
+
+#h1{
+    @include border();   
+}
+
+h2{
+     @include border();  
+     border-color: red;
+}
+
+#data{
+    @include border2(10px,blue)
+}
+.main{
+    height: 200px;
+    width: 200px;
+    @include border2(5px,green);
+
+}
+
+.main1{
+    @include flex(space-between);
+    .box{
+        height: 200px;
+        width: 200px;
+        @include border();
+    }
+    @media only screen and (max-width:768px) {
+        @include flex(center);
+        display: block;
+    }
+}

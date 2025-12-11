@@ -1,0 +1,13 @@
+%data{
+    border: 5px solid gold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: lightcoral;
+}
+
+h1{
+    @extend %data;
+    border-color: aqua
+}
+h2{
+    @extend %data;
+}

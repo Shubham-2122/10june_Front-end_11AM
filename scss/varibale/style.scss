@@ -1,14 +1,16 @@
 // vraible store
 $bg-color : red;
 $color : blue;
-$font : 50px;
+$font : 100px;
 
 #h1{
     background-color: $bg-color;
     color: $color;
-    font-size: $font;
+    // font-size: $font - 50px;
+    font-size: $font / 2;
 }
 h2{
     background-color: $color;
     color: $bg-color;
+    padding: $font/4;
 }
