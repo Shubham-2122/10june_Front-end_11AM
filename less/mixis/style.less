@@ -1,0 +1,33 @@
+.bordred(){
+    border: 5px solid green;
+}
+
+.border2(@size,@color){
+    border: @size solid @color;
+}
+
+.data1(@data){
+    display: flex;
+    justify-content: @data;
+}
+
+h1{
+    .bordred();
+}
+
+.main{
+    .border2(5px,red)
+}
+
+h2{
+    .border2(10px, blue)
+}
+
+.main2{
+    .data1(space-between);
+}
+.box{
+    height: 200px;
+    width: 200px;
+    .bordred();
+}
